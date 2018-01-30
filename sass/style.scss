@@ -1,15 +1,61 @@
 @import "variables";
-@import "../node_modules/bootstrap/scss/bootstrap";
 
-.card-columns {
-  @include media-breakpoint-only(xl) {
-    column-count: 3;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.cards-grid {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
   }
-  @include media-breakpoint-only(lg) {
-    column-count: 2;
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
   }
-  @include media-breakpoint-only(md) {
-    column-count: 1;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
   }
 }
 
+// Navigation
+
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+// Cards
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-container {
+  padding: 2px 16px;
+}
