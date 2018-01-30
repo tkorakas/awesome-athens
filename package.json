@@ -1,0 +1,13 @@
+{
+  "name": "athens-tech",
+  "version": "1.0.0",
+  "description": "Athens tech communities.",
+  "main": "index.js",
+  "author": "Thanos Korakas <thanoskorakas@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
