@@ -1,0 +1,37 @@
+{% extends "pages/partials/html.njk" %}
+
+{% block content %}
+    <div id="cards" style="margin-top: 12px; margin-bottom:  47px">
+        <div class="filter-container">
+            <input type="text" placeholder="Search..." class="search">
+            <label class="radios-container">Meetup
+                <input type="radio" value="meetup" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="radios-container">Workspace
+                <input type="radio" value="workspace" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <button class="button" id="reset">Reset</button>
+        </div>
+
+        <div class="cards-grid list">
+            {% for group in groups %}
+                <div class="card">
+                    <div class="hidden type">meetup</div>
+                    <img src="../assets/placeholder.jpg" alt="Avatar" style="width:100%">
+                    <div class="card-container">
+                        <h4 class="card-title">{{ group.name }}</h4>
+                        <p>{{ group.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block js %}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+    <script src="script.js"></script>
+{% endblock %}

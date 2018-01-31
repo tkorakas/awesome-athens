@@ -1,8 +1,10 @@
 @import "variables";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .hidden {
@@ -42,53 +44,27 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #e9e9e9;
+  background-color: $main-color;
+  height: 70px;
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: black;
+  color: white;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  padding: 0 12px;
+  line-height: 70px;
+  font-size: 2em;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: darken($main-color, 10);
 }
 
 .topnav a.active {
-  background-color: #2196F3;
-  color: white;
-}
-
-.topnav .search-container {
-  float: right;
-}
-
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-}
-
-.topnav .search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
-
-.topnav .search-container button:hover {
-  background: #ccc;
+  background-color: darken($main-color, 10);
 }
 
 @media screen and (max-width: 600px) {
@@ -125,4 +101,105 @@ li a:hover {
 
 .card-container {
   padding: 2px 16px;
+}
+
+// Button
+.button {
+  background-color: $main-color;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+// Radios
+.radios-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radios-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: $main-color;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radios-container:hover input ~ .checkmark {
+  background-color: darken($main-color, 15)
+}
+
+/* When the radio button is checked, add a blue background */
+.radios-container input:checked ~ .checkmark {
+  background-color: $main-color;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radios-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radios-container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+// Search
+.search {
+  padding: 10px;
+  font-size: 15px;
+  float: right;
+}
+
+.filter-container {
+  width: 100%;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+// Footer
+.footer {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  line-height: 35px;
+  background-color: $main-color;
+  color: white;
+  height: 35px;
+  text-align: center;
 }
