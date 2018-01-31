@@ -3,78 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body id="cards">
 
 <!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_searchbar3-->
-
+<div class="topnav">
+    <div class="container">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." class="search">
+            </form>
+        </div>
+    </div>
+</div>
 
 <div class="container" style="margin-top: 12px">
     <!--Filtering-->
-    <!--<div style="margin-bottom: 12px">-->
-        <!--<div class="form-check form-check-inline">-->
-            <!--<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="meetup">-->
-            <!--<label class="form-check-label" for="inlineRadio1">Community</label>-->
-        <!--</div>-->
-        <!--<div class="form-check form-check-inline">-->
-            <!--<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="workspace">-->
-            <!--<label class="form-check-label" for="inlineRadio2">Workspace</label>-->
-        <!--</div>-->
-        <!--<div class="form-check form-check-inline">-->
-            <!--<button class="form-check-input btn btn-sm btn-outline-info" id="reset">Reset</button>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <div class="cards-grid list">
-        <div class="card">
-            <div class="hidden type">meetup</div>
-            <img src="assets/placeholder.jpg" alt="Avatar" style="width:100%">
-            <div class="card-container">
-                <h4><b>John Doe</b></h4>
-                <p>Architect & Engineer</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="hidden type">meetup</div>
-            <img src="assets/placeholder.jpg" alt="Avatar" style="width:100%">
-            <div class="card-container">
-                <h4><b>John Doe</b></h4>
-                <p>Architect & Engineer</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="hidden type">meetup</div>
-            <img src="assets/placeholder.jpg" alt="Avatar" style="width:100%">
-            <div class="card-container">
-                <h4><b>John Doe</b></h4>
-                <p>Architect & Engineer</p>
-            </div>
-        </div>
+    <div style="margin-bottom: 12px; display: inline-block">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="meetup">
+        <label class="form-check-label" for="inlineRadio1">Community</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="workspace">
+        <label class="form-check-label" for="inlineRadio2">Workspace</label>
+        <button id="reset">Reset</button>
     </div>
 
+    <div class="cards-grid list">
+
+        
+        <div class="card">
+            <div class="hidden type">meetup</div>
+            <img src="../assets/placeholder.jpg" alt="Avatar" style="width:100%">
+            <div class="card-container">
+                <h4 class="card-title">SocialNerds</h4>
+                <p>Hello nerds!</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="hidden type">meetup</div>
+            <img src="../assets/placeholder.jpg" alt="Avatar" style="width:100%">
+            <div class="card-container">
+                <h4 class="card-title">Drupal meetup</h4>
+                <p>Hello nerds!</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="hidden type">meetup</div>
+            <img src="../assets/placeholder.jpg" alt="Avatar" style="width:100%">
+            <div class="card-container">
+                <h4 class="card-title">Drupal meetup</h4>
+                <p>Hello nerds!</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="hidden type">meetup</div>
+            <img src="../assets/placeholder.jpg" alt="Avatar" style="width:100%">
+            <div class="card-container">
+                <h4 class="card-title">Drupal meetup</h4>
+                <p>Hello nerds!</p>
+            </div>
+        </div>
+        
+    </div>
 </div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
-<script>
-  // var options = {
-  //   valueNames: ['card-title', 'type']
-  // }
-
-  // Refactor without jQuery
-  //
-  // var hackerList = new List('cards', options)
-  // $(document).ready(function () {
-  //   $('input[type=radio][name=inlineRadioOptions]').change(function () {
-  //     console.log(this.value)
-  //     hackerList.filter(item => item.values().type === this.value)
-  //   })
-  //
-  //   $('#reset').on('click', function () {
-  //     hackerList.filter(item => true)
-  //     $('input[name="inlineRadioOptions"]').prop('checked', false)
-  //   })
-  // })
-</script>
+<script src="script.js"></script>
 </body>
 </html>

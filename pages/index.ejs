@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="cards">
+
+<!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_searchbar3-->
+<%- include('partials/navigation'); %>
+
+<div class="container" style="margin-top: 12px">
+    <!--Filtering-->
+    <div style="margin-bottom: 12px; display: inline-block">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="meetup">
+        <label class="form-check-label" for="inlineRadio1">Community</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="workspace">
+        <label class="form-check-label" for="inlineRadio2">Workspace</label>
+        <button id="reset">Reset</button>
+    </div>
+
+    <div class="cards-grid list">
+
+        <% groups.forEach(function(group){ %>
+        <div class="card">
+            <div class="hidden type">meetup</div>
+            <img src="../assets/placeholder.jpg" alt="Avatar" style="width:100%">
+            <div class="card-container">
+                <h4 class="card-title"><%= group.name %></h4>
+                <p><%= group.description %></p>
+            </div>
+        </div>
+        <% }); %>
+    </div>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
