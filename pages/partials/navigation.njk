@@ -1,6 +1,6 @@
 <div class="topnav">
     <div class="container">
-        <a class="active" href="/">Athens Tech</a>
-        <a href="about">About</a>
+        <a {% if page == 'index' %} class="active" {% endif %} href="/">Athens Tech</a>
+        <a {% if page == 'about' %} class="active" {% endif %} href="about">About</a>
     </div>
 </div>

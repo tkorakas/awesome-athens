@@ -203,3 +203,14 @@ li a:hover {
   height: 35px;
   text-align: center;
 }
+
+// About form
+.about-form {
+  margin-top: 12px;
+  input, select, button {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+}

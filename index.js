@@ -9,9 +9,10 @@ let pages = fs.readdirSync(`pages/`)
 pages = pages.filter(page => page.includes('.njk'))
 
 pages.forEach((page) => {
-  const renderedPage = nunjucks.render(`pages/${page}`, {groups})
+  const pageName = page.split('.')[0]
 
-  const filename = page.split('.')[0];
-  fs.closeSync(fs.openSync(`${filename}.html`, 'a'))
-  fs.writeFileSync(`${filename}.html`, renderedPage)
+  const renderedPage = nunjucks.render(`pages/${page}`, {groups, page: pageName})
+
+  fs.closeSync(fs.openSync(`${pageName}.html`, 'a'))
+  fs.writeFileSync(`${pageName}.html`, renderedPage)
 })

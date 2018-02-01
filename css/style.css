@@ -162,3 +162,11 @@ li a:hover {
   color: white;
   height: 35px;
   text-align: center; }
+
+.about-form {
+  margin-top: 12px; }
+  .about-form input, .about-form select, .about-form button {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box; }
