@@ -8,11 +8,15 @@ let pages = fs.readdirSync(`pages/`)
 
 pages = pages.filter(page => page.includes('.njk'))
 
+pageNames = pages.map(page => page.split('.')[0])
+
+console.log(pageNames)
+
 pages.forEach((page) => {
-  const pageName = page.split('.')[0]
+  const currentPage = page.split('.')[0]
 
-  const renderedPage = nunjucks.render(`pages/${page}`, {groups, page: pageName})
+  const renderedPage = nunjucks.render(`pages/${page}`, {groups, currentPage, pages: pageNames})
 
-  fs.closeSync(fs.openSync(`${pageName}.html`, 'a'))
-  fs.writeFileSync(`${pageName}.html`, renderedPage)
+  fs.closeSync(fs.openSync(`${currentPage}.html`, 'a'))
+  fs.writeFileSync(`${currentPage}.html`, renderedPage)
 })

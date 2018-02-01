@@ -1,0 +1,25 @@
+{% extends "pages/partials/html.njk" %}
+
+{% block content %}
+    <form class="about-form" method="POST" action="https://formspree.io/thanoskorakas@gmail.com">
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="Your email" required>
+
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" placeholder="Community/Workspace name" required>
+
+        <label for="url">Your page</label>
+        <input type="text" name="url" placeholder="Community/Workspace site" required>
+
+        <label for="logo">Logo url</label>
+        <input id="logo" type="text" name="logo" placeholder="Logo URL">
+
+        <label for="type">Community or Workspace</label>
+        <select id="type" name="type" required>
+            <option value="community">Community</option>
+            <option value="workspace">Workspace</option>
+        </select>
+
+        <button class="button" type="submit">Send</button>
+    </form>
+{% endblock %}
