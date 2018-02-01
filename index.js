@@ -10,8 +10,6 @@ pages = pages.filter(page => page.includes('.njk'))
 
 pageNames = pages.map(page => page.split('.')[0])
 
-console.log(pageNames)
-
 pages.forEach((page) => {
   const currentPage = page.split('.')[0]
 
