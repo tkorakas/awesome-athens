@@ -18,8 +18,8 @@ gulp.task('sass:prod', function() {
 
 gulp.task('copy', function () {
   gulp
-    .src('script.js')
-    .pipe(gulp.dest('public'));
+    .src('assets/*')
+    .pipe(gulp.dest('public/assets'))
 });
 
 gulp.task('build', ['sass:prod', 'copy'])
