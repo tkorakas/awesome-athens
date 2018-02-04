@@ -15,8 +15,8 @@ pages.forEach((page) => {
 
   const renderedPage = nunjucks.render(`pages/${page}`, {groups, currentPage, pages: pageNames})
 
-  fs.closeSync(fs.openSync(`public/${currentPage}.html`, 'a'))
-  fs.writeFileSync(`public/${currentPage}.html`, renderedPage)
+  fs.closeSync(fs.openSync(`${__dirname}/public/${currentPage}.html`, 'a'))
+  fs.writeFileSync(`${__dirname}/public/${currentPage}.html`, renderedPage)
 })
 
 console.log('Build completed!')
