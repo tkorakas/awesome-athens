@@ -1,5 +1,5 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
+const gulp = require('gulp')
+const sass = require('gulp-sass')
 
 // Compile sass to css for dev.
 gulp.task('sass', () => {
@@ -7,10 +7,23 @@ gulp.task('sass', () => {
   // Initializes sourcemaps.
     .pipe(sass.sync().on('error', sass.logError))
     // Writes sourcemaps into the CSS file.
-    .pipe(gulp.dest('./css'))
+    .pipe(gulp.dest('./public/css'))
+})
+
+gulp.task('sass:prod', function() {
+  return gulp.src('./sass/*.scss')
+    .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(gulp.dest('./public/css'))
+})
+
+gulp.task('copy', function () {
+  gulp
+    .src('script.js')
+    .pipe(gulp.dest('public'));
 });
 
+gulp.task('build', ['sass:prod', 'copy'])
 
 gulp.task('default', () => {
-  gulp.watch('./sass/*.scss', ['sass']);
-});
+  gulp.watch('./sass/*.scss', ['sass'])
+})

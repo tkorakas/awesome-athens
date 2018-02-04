@@ -6,9 +6,13 @@
   "author": "Thanos Korakas <thanoskorakas@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "ejs": "^2.5.7",
+    "nunjucks": "^2.5.7",
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
-    "js-yaml": "^3.10.0"
+    "js-yaml": "^3.10.0",
+    "gulp-copy": "^1.1.0"
+  },
+  "scripts": {
+    "build": "node index.js && gulp build"
   }
 }
