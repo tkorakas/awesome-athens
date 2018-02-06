@@ -1,7 +1,24 @@
-<div class="topnav">
-    <div class="container">
-        <a {% if page == 'index' %} class="active" {% endif %} href="/">Athens</a>
-        <a {% if page == 'about' %} class="active" {% endif %} href="about">About</a>
-        <a {% if page == 'contact' %} class="active" {% endif %} href="contact">Contact</a>
-    </div>
+{#<div class="topnav">#}
+    {#<div class="container">#}
+        {#<a {% if page == 'index' %} class="active" {% endif %} href="/">Athens</a>#}
+        {#<a {% if page == 'about' %} class="active" {% endif %} href="about">About</a>#}
+        {#<a {% if page == 'contact' %} class="active" {% endif %} href="contact">Contact</a>#}
+    {#</div>#}
+{#</div>#}
+
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+            <div class="container">
+                <a href="/" class="brand-logo">Logo</a>
+            </div>
+            <form>
+                <div class="input-field">
+                    <input id="search" type="search" required>
+                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                    <i class="material-icons">close</i>
+                </div>
+            </form>
+        </div>
+    </nav>
 </div>

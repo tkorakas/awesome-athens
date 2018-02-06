@@ -1,30 +1,23 @@
 {% extends "pages/partials/html.njk" %}
 
 {% block content %}
-    <div id="cards" style="margin-top: 12px; margin-bottom:  47px">
-        <div class="filter-container">
-            <input type="text" placeholder="Search..." class="search">
-            <label class="radios-container">Meetup
-                <input type="radio" value="meetup" name="radio">
-                <span class="checkmark"></span>
-            </label>
-            <label class="radios-container">Workspace
-                <input type="radio" value="workspace" name="radio">
-                <span class="checkmark"></span>
-            </label>
-            <button class="button" id="reset">Reset</button>
-        </div>
-
+    <div id="cards">
         <div class="cards-grid list">
             {% for group in groups %}
                 <div class="card">
-                    <div class="hidden type">meetup</div>
-                    <img src="assets/placeholder.jpg" alt="Avatar" style="width:100%">
-                    <div class="card-container">
-                        <h4 class="card-title">{{ group.name }}</h4>
+                    <div class="card-image">
+                        <img src="assets/placeholder.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{ group.name }}<i class="material-icons right">more_vert</i></span>
+
                         <p>{{ group.description }}</p>
                     </div>
+                    <div class="card-action">
+                        <a href="{{ group.url }}">This is a link</a>
+                    </div>
                 </div>
+
             {% endfor %}
         </div>
     </div>
