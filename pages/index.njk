@@ -1,24 +1,18 @@
 {% extends "pages/partials/html.njk" %}
 
 {% block content %}
-    <div id="cards">
-        <div class="cards-grid list">
-            {% for group in groups %}
-                <div class="card">
-                    <div class="card-image">
-                        <img src="assets/placeholder.jpg">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title grey-text text-darken-4">{{ group.name }}</span>
-
-                        <p>{{ group.description }}</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="{{ group.url }}">Go to site</a>
-                    </div>
+    <div class="cards">
+        {% for group in groups %}
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title grey-text text-darken-4">{{ group.name }}</span>
+                    <p>{{ group.description }}</p>
                 </div>
+                <div class="card-action">
+                    <a href="{{ group.url }}">Go to site</a>
+                </div>
+            </div>
 
-            {% endfor %}
-        </div>
+        {% endfor %}
     </div>
 {% endblock %}

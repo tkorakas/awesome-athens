@@ -12,10 +12,10 @@ body {
   display: none;
 }
 
-.cards-grid {
+.cards {
   display: grid;
   grid-gap: 12px;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 html {
@@ -28,7 +28,7 @@ html {
   box-sizing: inherit;
 }
 main {
-  padding-bottom: 240px;
+  padding-bottom: 165px;
 }
 
 footer {
