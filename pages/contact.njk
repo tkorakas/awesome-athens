@@ -1,25 +1,79 @@
 {% extends "pages/partials/html.njk" %}
 
 {% block content %}
-    <form class="about-form" method="POST" action="https://formspree.io/thanoskorakas@gmail.com">
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" placeholder="Your email" required>
+    {#<form class="about-form" method="POST" action="https://formspree.io/thanoskorakas@gmail.com">#}
+    {#<label for="email">Email</label>#}
+    {#<input id="email" type="email" name="email" placeholder="Your email" required>#}
 
-        <label for="name">Name</label>
-        <input id="name" type="text" name="name" placeholder="Community/Workspace name" required>
+    {#<label for="name">Name</label>#}
+    {#<input id="name" type="text" name="name" placeholder="Community/Workspace name" required>#}
 
-        <label for="url">Your page</label>
-        <input id="url" type="text" name="url" placeholder="Community/Workspace site" required>
+    {#<label for="url">Your page</label>#}
+    {#<input id="url" type="text" name="url" placeholder="Community/Workspace site" required>#}
 
-        <label for="logo">Logo url</label>
-        <input id="logo" type="text" name="logo" placeholder="Logo URL">
+    {#<label for="logo">Logo url</label>#}
+    {#<input id="logo" type="text" name="logo" placeholder="Logo URL">#}
 
-        <label for="type">Community or Workspace</label>
-        <select id="type" name="type" required>
-            <option value="community">Community</option>
-            <option value="workspace">Workspace</option>
-        </select>
+    {#<label for="type">Community or Workspace</label>#}
+    {#<select id="type" name="type" required>#}
+    {#<option value="community">Community</option>#}
+    {#<option value="workspace">Workspace</option>#}
+    {#</select>#}
 
-        <button class="button" type="submit">Send</button>
-    </form>
+    {#<button class="button" type="submit">Send</button>#}
+    {#</form>#}
+
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder="Email" name="email" type="email" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="text" name="name" placeholder="Community/Workspace name" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="text" name="url" placeholder="Community/Workspace site" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="text" name="logo" placeholder="Logo URL">
+                </div>
+            </div>
+            <div class="row">
+                <div class="file-field input-field col s12">
+                    <div class="btn">
+                        <span>File</span>
+                        <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <select>
+                        <option value="community">Community</option>
+                        <option value="workspace">Workspace</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Send</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script>
+      $(document).ready(function () {
+        $('select').material_select()
+      })
+
+    </script>
 {% endblock %}
