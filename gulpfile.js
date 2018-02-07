@@ -22,6 +22,12 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('public/assets'))
 });
 
+gulp.task('copy-files', function () {
+  gulp
+    .src('files/*')
+    .pipe(gulp.dest('public'))
+});
+
 gulp.task('build', ['sass:prod', 'copy'])
 
 gulp.task('default', () => {
