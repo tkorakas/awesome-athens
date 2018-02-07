@@ -3,28 +3,13 @@
   url: https://socialnerds.gr
   description: Agile Web Development. We are a community. Hire us for your amazing project on Agile, React, Symfony, Laravel, Drupal, Testing methodologies.
   image: https://www.socialnerds.gr/images/logo.png
-- name: Drupal meetup
-  type: community
-  url: https://drupal.org/drupal-greece
-  description: Hello nerds!
-  image: https://dt-cdn.net/assets/images/gfx/icons/tech/drupal-9256809035.svg
 - name: Greek Digital Community
   type: community
-  url: https://drupal.org/drupal-greece
+  url: https://greekdigitalcommunity.com/
   description: Είμαστε μία ψηφιακή κοινότητα στο Slack που έχει στόχο να προσφέρει ένα μέσο επικοινωνίας σε όσους ασχολούνται με τις ψηφιακές τεχνολογίες στην Ελλάδα και όχι μόνο.
   image: assets/placeholder.jpg
 - name: Drupal meetup
   type: community
-  url: https://drupal.org/drupal-greece
-  description: Hello nerds!
-  image: assets/placeholder.jpg
-- name: Drupal meetup
-  type: community
-  url: https://drupal.org/drupal-greece
-  description: Hello nerds!
-  image: assets/placeholder.jpg
-- name: Drupal meetup
-  type: community
-  url: https://drupal.org/drupal-greece
-  description: Hello nerds!
-  image: assets/placeholder.jpg
+  url: https://www.meetup.com/Drupal-Athens-Greece/
+  description: Το γκρουπ είναι για όλους όσους χρησιμοποιούν ή ενδιαφέρονται να μάθουν για το Drupal ανεξαρτήτως εμπειρίας και βρίσκονται στη περιοχή της Αθήνας.
+  image: https://dt-cdn.net/assets/images/gfx/icons/tech/drupal-9256809035.svg
