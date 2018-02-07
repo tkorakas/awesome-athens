@@ -28,7 +28,7 @@ gulp.task('copy-files', function () {
     .pipe(gulp.dest('public'))
 });
 
-gulp.task('build', ['sass:prod', 'copy'])
+gulp.task('build', ['sass:prod', 'copy', 'copy-files'])
 
 gulp.task('default', () => {
   gulp.watch('./sass/*.scss', ['sass'])
