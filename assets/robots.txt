@@ -1,2 +1,3 @@
 User-agent: *
-Disallow: 
+Disallow:
+sitemap: https://www.awesomeathens.info/sitemap.xml
