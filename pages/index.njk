@@ -3,16 +3,17 @@
 {% block content %}
     <div class="cards">
         {% for group in groups %}
-            <div class="card">
-                <div class="card-content">
-                    <span class="card-title grey-text text-darken-4">{{ group.name }}</span>
-                    <p>{{ group.description }}</p>
+            <a href="{{ group.url }}" target="_blank">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ group.image }}">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title grey-text text-darken-4">{{ group.name }}</span>
+                        <p>{{ group.description }}</p>
+                    </div>
                 </div>
-                <div class="card-action">
-                    <a href="{{ group.url }}">Go to site</a>
-                </div>
-            </div>
-
+            </a>
         {% endfor %}
     </div>
 {% endblock %}
