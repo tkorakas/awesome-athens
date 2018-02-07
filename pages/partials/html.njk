@@ -4,19 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+    <!-- COMMON TAGS -->
+    <meta charset="utf-8">
+    <title>Awesome Athens</title>
+    <!-- Search Engine -->
+    <meta name="description" content="description">
+    <meta name="image" content="image">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="Awesome Athens">
+    <meta itemprop="description" content="description">
+    <meta itemprop="image" content="image">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Awesome Athens">
+    <meta name="twitter:description" content="description">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="Awesome Athens">
+    <meta name="og:description" content="description">
+    <meta name="og:url" content="https://www.awesomeathens.info/">
+    <meta name="og:site_name" content="Awesome Athens">
+    <meta name="og:type" content="website">
+
     <title>{{ title }}</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<div class="main-wrapper">
+<body class="body">
     <header>
         {% include "pages/partials/navigation.njk" %}
     </header>
-    <main class="container">
+    <main class="container main">
         {% block content %}
 
         {% endblock %}
@@ -24,7 +44,6 @@
     <footer class="page-footer">
         {% include "pages/partials/footer.njk" %}
     </footer>
-</div>
 <script
         src="//code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

@@ -1,11 +1,12 @@
 @import "variables";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-body {
+.body {
   font-family: 'Open Sans', sans-serif;
-  position: relative;
-  margin: 0;
+  display: flex;
   min-height: 100vh;
+  flex-direction: column;
+  height: 100%;
 }
 
 .hidden {
@@ -16,4 +17,13 @@ body {
   display: grid;
   grid-gap: 12px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+
+html {
+  height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
 }
