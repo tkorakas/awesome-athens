@@ -15,10 +15,9 @@
 
 .cards {
   display: grid;
-  grid-gap: 12px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
-
 
 html {
   height: 100%;
@@ -26,4 +25,29 @@ html {
 
 .main {
   flex: 1 0 auto;
+}
+
+.list-filter {
+  display: inline-block;
+  margin: 15px 0;
+  label {
+    margin-right: 15px;
+  }
+}
+
+.card-title {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card-content > p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 400px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }

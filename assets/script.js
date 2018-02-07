@@ -2,19 +2,21 @@ const options = {
   valueNames: ['card-title', 'type']
 }
 
-const hackerList = new List('cards', options)
+const hackerList = new List('cards-container', options)
 
-const resetButton = document.querySelector('#reset')
-const radios = document.querySelectorAll('input[name="radio"]')
-
+const radios = document.querySelectorAll('input[name="types"]')
+let radiosState = {}
 radios.forEach(function(el) {
-  el.addEventListener('change', function(event) {
-    hackerList.filter(item => item.values().type === event.target.value)
+  radiosState[el.id] = false
+  el.addEventListener('click', function(event) {
+    if (!radiosState[el.id]) {
+      Object.keys(radiosState).forEach(key => radiosState[key] = false)
+      radiosState[el.id] = true
+      hackerList.filter(item => item.values().type === event.target.id)
+    } else {
+      Object.keys(radiosState).forEach(key => radiosState[key] = false)
+      el.checked = false
+      hackerList.filter(item => true)
+    }
   })
-})
-
-resetButton.addEventListener('click', function (e) {
-  e.preventDefault();
-  hackerList.filter(item => true)
-  radios.forEach(el => el.checked = false);
 })

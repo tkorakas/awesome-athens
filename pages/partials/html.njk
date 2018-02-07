@@ -33,17 +33,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="body">
-    <header>
-        {% include "pages/partials/navigation.njk" %}
-    </header>
-    <main class="container main">
-        {% block content %}
-
-        {% endblock %}
-    </main>
-    <footer class="page-footer">
-        {% include "pages/partials/footer.njk" %}
-    </footer>
+<header>
+    {% include "pages/partials/navigation.njk" %}
+</header>
+<main class="container main">
+    {% block content %}
+    {% endblock %}
+</main>
+<footer class="page-footer blue darken-2">
+    {% include "pages/partials/footer.njk" %}
+</footer>
 <script
         src="//code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

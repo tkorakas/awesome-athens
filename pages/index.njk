@@ -1,19 +1,33 @@
 {% extends "pages/partials/html.njk" %}
 
 {% block content %}
-    <div class="cards">
-        {% for group in groups %}
-            <a href="{{ group.url }}" target="_blank">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="{{ group.image }}">
+    <div id="cards-container">
+        <div class="container list-filter">
+            <input name="types" value="community" type="radio" id="community"/>
+            <label for="community">Communities</label>
+            <input name="types" value="workspace" type="radio" id="workspace"/>
+            <label for="workspace">Workspaces</label>
+        </div>
+        <div class="cards list">
+            {% for group in groups %}
+                <a href="{{ group.url }}" target="_blank">
+                    <div class="card hoverable">
+                        <span class="hide type">{{ group.type }}</span>
+                        <div class="card-image">
+                            <img src="{{ group.image }}">
+                        </div>
+                        <div class="card-content">
+                            <span title="{{ group.name }}" class="card-title grey-text text-darken-4">{{ group.name }}</span>
+                            <p title="{{ group.description }}">{{ group.description }}</p>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <span class="card-title grey-text text-darken-4">{{ group.name }}</span>
-                        <p>{{ group.description }}</p>
-                    </div>
-                </div>
-            </a>
-        {% endfor %}
+                </a>
+            {% endfor %}
+        </div>
     </div>
+{% endblock %}
+
+{% block js %}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+    <script src="assets/script.js"></script>
 {% endblock %}
