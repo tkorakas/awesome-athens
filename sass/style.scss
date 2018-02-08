@@ -46,6 +46,14 @@ html {
   text-overflow: ellipsis;
 }
 
+.card-image img {
+  //min-height: 100%;
+}
+
+.brand-logo img {
+  height: 30px;
+}
+
 @media screen and (max-width: 400px) {
   .cards {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
