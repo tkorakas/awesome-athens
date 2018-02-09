@@ -46,8 +46,9 @@ html {
   text-overflow: ellipsis;
 }
 
-.card-image img {
-  //min-height: 100%;
+/* Prevents img without src to appear */
+img:not([src]) {
+  visibility: hidden;
 }
 
 .brand-logo img {

@@ -1,5 +1,21 @@
 {% extends "pages/partials/html.njk" %}
 
+{% block lazyLoad %}
+    <script type="text/javascript">
+      const slowLoad = window.setTimeout(() => {
+        console.log('page is too slow')
+        const images = document.querySelectorAll('.card-image > img')
+        images.forEach(image => image.dataset.src = 'assets/placeholder.png')
+        new LazyLoad()
+      }, 1500)
+
+      window.addEventListener('load', () => {
+        window.clearTimeout(slowLoad)
+        new LazyLoad()
+      }, false)
+    </script>
+{% endblock %}
+
 {% block content %}
     <div id="cards-container">
         <div class="container list-filter">
@@ -14,7 +30,7 @@
                     <div class="card hoverable">
                         <span class="hide type">{{ group.type }}</span>
                         <div class="card-image">
-                            <img alt="{{ group.name }}" src="{%  if 'image' in group %}{{ group.image }}{% else %}assets/placeholder.png{% endif %}">
+                            <img alt="{{ group.name }}" data-src="{%  if 'image' in group %}{{ group.image }}{% else %}assets/placeholder.png{% endif %}">
                         </div>
                         <div class="card-content">
                             <span title="{{ group.name }}" class="card-title grey-text text-darken-4">{{ group.name }}</span>
@@ -28,6 +44,7 @@
 {% endblock %}
 
 {% block js %}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.6.0/lazyload.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
     <script src="assets/script.js"></script>
 {% endblock %}
