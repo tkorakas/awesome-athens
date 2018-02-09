@@ -3,7 +3,6 @@
 {% block lazyLoad %}
     <script type="text/javascript">
       const slowLoad = window.setTimeout(() => {
-        console.log('page is too slow')
         const images = document.querySelectorAll('.card-image > img')
         images.forEach(image => image.dataset.src = 'assets/placeholder.png')
         new LazyLoad()
