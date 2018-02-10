@@ -14,5 +14,8 @@
   },
   "scripts": {
     "build": "node index.js && gulp build"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^4.1.0"
   }
 }
