@@ -62,8 +62,100 @@
   url: https://www.meetup.com/GreeceJS/
   description: A bi-monthly celebration and exploration of the JavaScript programming language. This is a place to share knowledge, ask questions, learn and grumble. If you are interested in speaking or sponsoring please contact one of the organizers.
   image: greecejs.png
-#- name:
-#  type: community
-#  url:
-#  description:
-#  image:
+- name: Support Driven Meetup
+  type: community
+  url: https://www.meetup.com/Athens-Support-Driven-Meetup/events/247644920/
+  description: This Meetup is all about Customers! We are going to have topics covering the entire customer journey, the customer support, success, onboarding, retention and lots more.
+- name: Docker
+  type: community
+  url: https://www.meetup.com/Docker-Athens/
+  description: Learn, Collaborate & Dockerize! Meet other developers and ops engineers in your community that are using and learning about Docker.
+  image: docker.jpg
+- name: UX Community
+  type: community
+  url: https://www.meetup.com/Athens-UX-Community/
+  description: This is a group for anyone interested in User Experience in the broadest sense, UX researchers, UX designers, User researchers and Usability engineers, interaction designers, web designers and developers, business analysts and project managers, digital marketing people, start-up founders etc.
+- name: Java Hellenic User Group
+  type: community
+  url: https://www.meetup.com/Java-Hellenic-User-Group/
+  description: JHUG, is the very first Java User group in Greece, founded in 2001 by a handful of Java enthusiasts and professionals.
+  image: java.png
+- name: Ruby Meetup
+  type: community
+  url: https://www.meetup.com/Athens-Ruby-Meetup
+  description: This is a group for anyone who wants to learn more about Ruby!
+  image: ruby.png
+- name: ReactJS Athens
+  type: community
+  url: https://www.meetup.com/ReactJSAthens/
+  description: A group focused on the goodies Javascript brings to applications development.
+  image: react.png
+- name: Data Science
+  type: community
+  url: https://www.meetup.com/Data-Science-Athens/
+  description: We are a community of data scientists based in Athens. We aim to bring together practitioners, students, researchers, academics and entrepreneurs from different backgrounds who all share a passion for data science, machine learning, data mining, and related technologies.
+- name: Python Users Meetup
+  type: community
+  url: https://www.meetup.com/Athens-Python-Users-Meetup/
+  description: This is the meetup group of the Python Users Group in Athens, Greece.
+  image: python.png
+- name: IoT Meetup
+  type: community
+  url: https://www.meetup.com/Athens-IoT-Meetup/
+  description: A meetup for Internet of Things enthusiasts in Athens!
+- name: Atlassian User Group
+  type: community
+  url: https://www.meetup.com/Athens-Atlassian-User-Group/
+  description: Athens Atlassian User Group
+- name: Clojure Meetup
+  type: community
+  url: https://www.meetup.com/Athens-Clojure-Meetup/
+  description: Meet and talk about Clojure programming language, various functional programming concepts and practices.
+  image: clojure.png
+- name: Laravel Meetup
+  type: community
+  url: https://www.meetup.com/athens-laravel-meetup/
+  description: Athens Laravel Meetup is a group for anyone interested in web development. We mainly focus in PHP and the use of Laravel framework but we are open to all related frameworks/technologies.
+  image: laravel.png
+- name: Sketch & Design
+  type: community
+  url: https://www.meetup.com/Sketch-Design-Athens/
+  description: Athens Meetup for designers working on Digital Product Design (websites, mobile apps).
+  image: sketch.png
+- name: AzureHeads Cloud Meetup
+  type: community
+  url: https://www.meetup.com/azureheads/
+  description: A group of people obsessed with the possibilities of cloud computing and Microsoft's cloud offering, Microsoft Azure!
+- name: OpenStack User Group
+  type: community
+  url: https://www.meetup.com/Athens-OpenStack-User-Group/
+  description: This is the Athens OpenStack user and developer meet-up. We are a group of software engineers who are engaged in the OpenStack project.
+  image: openstack.jpg
+- name: WordPress Meetup
+  type: community
+  url: https://www.meetup.com/Athens-WordPress-Meetup/
+  description: We are a group of people, passionate about web design, web development and, well, WordPress!
+  image: wordpress.png
+- name: CocoaHeads
+  type: community
+  url: https://www.meetup.com/CocoaHeadsATH/
+  description: CocoaHeads is a group devoted to the discussion of Apple's Cocoa Framework for programming on Mac OS X and iOS in Swift and Objective-C.
+- name: iOS MeetUps
+  type: community
+  url: https://www.meetup.com/Athens-iOS-MeetUps/
+  description: Athens iOS meetups is a local meetup for people who are interested in iOS development and related technologies.
+  image: ios.png
+- name: Analytics At Speed
+  type: community
+  url: https://www.meetup.com/kx-athens/
+  description: At our meetups we like to collaborate ideas, provide an environment for education and discovery and make data fun all whilst increasing knowledge about kdb+ and its programming language, q.
+- name: Elastic
+  type: community
+  url: https://www.meetup.com/Greece-Elastic/
+  description: This group is for anyone interested in open source search, logging, analytics, and data visualization.
+  image: elastic.png
+- name: Hellenic Linux User Group
+  type: community
+  url: https://www.hellug.gr/
+  description: Ένωση χρηστών και φίλων Λίνουξ Ελλάδας
+  image: linux.png
