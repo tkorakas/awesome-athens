@@ -29,7 +29,9 @@
                     <div class="card hoverable">
                         <span class="hide type">{{ group.type }}</span>
                         <div class="card-image">
-                            <img alt="{{ group.name }}" data-src="{%  if 'image' in group %}{{ group.image }}{% else %}assets/placeholder.png{% endif %}">
+                            <div class="crop">
+                                <img alt="{{ group.name }}" data-src="{%  if 'image' in group %}{{ group.image }}{% else %}output.png{% endif %}">
+                            </div>
                         </div>
                         <div class="card-content">
                             <span title="{{ group.name }}" class="card-title grey-text text-darken-4">{{ group.name }}</span>

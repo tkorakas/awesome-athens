@@ -17,6 +17,21 @@
   display: grid;
   grid-gap: 15px;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  .card-image {
+    height: 150px;
+    position: relative;
+    background-color: #F9F9F9;
+    .crop {
+      height: 100px;
+      width: 100px;
+      overflow: hidden;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -50px;
+      margin-top: -50px;
+    }
+  }
   a {
     max-width: 100%;
   }

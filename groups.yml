@@ -12,3 +12,59 @@
   url: https://www.meetup.com/Drupal-Athens-Greece/
   description: Το γκρουπ είναι για όλους όσους χρησιμοποιούν ή ενδιαφέρονται να μάθουν για το Drupal ανεξαρτήτως εμπειρίας και βρίσκονται στη περιοχή της Αθήνας.
   image: https://dt-cdn.net/assets/images/gfx/icons/tech/drupal-9256809035.svg
+- name: Bitcoin & Blockchain Tech Meetup
+  type: community
+  url: https://www.meetup.com/BlockchainGreece-0/
+  description: Ο σκοπός μας είναι να έχουμε μία καινοτόμο και διαφανή κοινότητα μέσα στο αποκεντρωμένο, συνεργατικό δίκτυο πληρωμών, ανθρώπων και επιχειρήσεων.
+  image: https://tctechcrunch2011.files.wordpress.com/2013/05/bitcoin.png
+- name: Agile Greece
+  type: community
+  url: https://www.meetup.com/Agile-Greece/
+  description: A community of agile practitioners and for anyone interested in agile principles and practices like Scrum, XP, Lean, Kanban, Test Driven Development, Product Ownership etc.
+- name: Virtual Reality Meetup
+  type: community
+  url: https://www.meetup.com/Athens-Virtual-Reality-Meetup/
+  description: Αυτή η ομάδα είναι για οποιονδήποτε ενδιαφέρεται για immersive technologies με έμφαση στην Εικονική, Επαυξημένη και Μεικτή Πραγματικότητα.
+  image: https://www.qualcomm.com/sites/ember/files/styles/optimize/public/components/one-column-hdi/top/xr-icon-1.png
+- name: dotNETZone, The Greek .NET User Group @ Meetup
+  type: community
+  url: https://www.meetup.com/dotNETZone/
+  description: A meetup for all developers in Greece, interested in .NET programming. Our .NET User Group has over 8000 members.
+  image: https://dt-cdn.net/assets/images/gfx/icons/tech/dotnetmicrosoft-536938fee2.svg
+- name: API
+  type: community
+  url: https://www.meetup.com/API-Athens/
+  description: This meetup is for people who build, use, explore or want to learn more about APIs.
+  image: https://www1-lw.xda-cdn.com/files/2016/01/api-a397cc184c5622fb5130af1b7baf149d.png
+- name: Hackerspace GR
+  type: workspace
+  url: https://www.meetup.com/hackerspace_gr/
+  description: This is a group for anyone interested in creativity, collaboration, research, development and, of course, education. It is a dynamic community with ideas inspired by the Open Source philosophy.
+  image: images/hackerspace.png
+- name: GDG Android
+  type: community
+  url: https://www.meetup.com/GDG-Android-Athens/
+  description: GDG Android Athens is an independent group of Android Developers in Athens that meet regularly in order to network and exchange ideas or knowledge around Android development.
+  image: https://vignette.wikia.nocookie.net/fictionalcrossover/images/0/0c/Bugdroid.png
+- name: Startup Grind
+  type: community
+  url: https://www.meetup.com/Startup-Grind-Athens/
+  description: Startup Grind is a global startup community designed to educate, inspire, and connect entrepreneurs.
+  image: https://cdn1.iconfinder.com/data/icons/business-and-finance-20/200/vector_65_10-512.png
+- name: Hyperledger
+  type: community
+  url: https://www.meetup.com/Hyperledger-Athens/
+  description: Hyperledger is an open source collaborative effort created to advance cross-industry blockchain technologies
+- name: Big Data
+  type: community
+  url: https://www.meetup.com/Athens-Big-Data/
+  description: This is a group for anyone interested in Big Data technologies, products and tools.
+- name: GreeceJS
+  type: community
+  url: https://www.meetup.com/GreeceJS/
+  description: A bi-monthly celebration and exploration of the JavaScript programming language. This is a place to share knowledge, ask questions, learn and grumble. If you are interested in speaking or sponsoring please contact one of the organizers.
+#- name:
+#  type: community
+#  url:
+#  description:
+#  image:
