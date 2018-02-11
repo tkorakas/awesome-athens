@@ -2,7 +2,19 @@ const yaml = require('js-yaml')
 const fs = require('fs')
 const nunjucks = require('nunjucks')
 
-const groups = yaml.safeLoad(fs.readFileSync('groups.yml', 'utf8'))
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+const groups = yaml.safeLoad(fs.readFileSync('groups.yml', 'utf8')).sort((a, b) => {
+  const nameA = a.name.toUpperCase();
+  const nameB = b.name.toUpperCase();
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+
+  return 0;
+})
 
 let pages = fs.readdirSync(`pages/`)
 
