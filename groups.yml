@@ -64,7 +64,7 @@
   image: greecejs.png
 - name: Support Driven Meetup
   type: community
-  url: https://www.meetup.com/Athens-Support-Driven-Meetup/events/247644920/
+  url: https://www.meetup.com/Athens-Support-Driven-Meetup
   description: This Meetup is all about Customers! We are going to have topics covering the entire customer journey, the customer support, success, onboarding, retention and lots more.
 - name: Docker
   type: community
@@ -159,3 +159,14 @@
   url: https://www.hellug.gr/
   description: Ένωση χρηστών και φίλων Λίνουξ Ελλάδας
   image: linux.png
+- name: Angular
+  type: community
+  url: https://www.meetup.com/Angular-Athens/
+  description: The new version of Angular is here to stay and we want to build a community in Athens in order to explore the huge ecosystem around this framework, learn new things and share our knowledge and best practices about Angular and front end development in general. This group is for both newbies and experienced developers who want to be part of this community.
+  image: angular.png
+- name: Papers We Love
+  type: community
+  url: https://www.meetup.com/Papers-We-Love-Athens/
+  description: Come share the ideas in an awesome academic/research paper with fellow engineers, programmers, and paper-readers.
+  image: paperwelove.png
+
