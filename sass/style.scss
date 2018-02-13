@@ -59,9 +59,8 @@ html {
 }
 
 .card-content > p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  height: 100px;
+  overflow: scroll;
 }
 
 /* Prevents img without src to appear */
