@@ -1,0 +1,5 @@
+<ul>
+{% for event in upcomingEvents %}
+    <li>{{ event.name }} - {{ event.local_date }}{{ event.link }}</li>
+{% endfor %}
+</ul>

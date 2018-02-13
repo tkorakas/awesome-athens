@@ -1,7 +1,7 @@
 //https://stackoverflow.com/questions/42558149/delay-batch-get-requests-to-server-javascript
 const axios = require('axios')
 
-asyncFunc =  function(url) {
+asyncFunc = async function(url) {
   return axios.get(url)
 }
 
@@ -28,10 +28,13 @@ module.exports = function(args) {
     })
   }
 
-  let execute = function(call) {
-    asyncFunc(call.url)
-      .then(call.resolve)
-      .catch(call.reject)
+  let execute = async function(call) {
+    try {
+      const res = await asyncFunc(call.url)
+      call.resolve(res)
+    } catch(e) {
+      call.reject(e)
+    }
 
     setTimeout(nextCall, delayMs)
   }

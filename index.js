@@ -21,40 +21,65 @@ const groups = yaml.safeLoad(fs.readFileSync('groups.yml', 'utf8')).sort((a, b) 
   return 0
 })
 
-let myFactory = delayFactory({
-  delayMs: 500
-})
-let events = groups.filter(group => group.url.includes('meetup.com'))
-events.forEach((event) => {
-  myFactory.queueCall(`${API}/${event.url.split('/')[3]}/events?page=20&key=${key}`)
-    .then(res => console.log(res.data))
-    .catch(console.log)
-})
+buildPages()
 
-let pages = fs.readdirSync(`pages/`)
+async function buildPages() {
+  try {
+    // Load upcoming events.
+    let upcomingEvents = await loadEvents()
 
-pages = pages.filter(page => page.includes('.njk'))
+    let pages = fs.readdirSync(`pages/`)
+    pages = pages.filter(page => page.includes('.njk'))
 
-pageNames = pages.map(page => page.split('.')[0])
+    pageNames = pages.map(page => page.split('.')[0])
 
-const pageTitles = {
-  'index': 'Awesome Athens',
-  'about': 'About',
-  'contact': 'Contact'
+    const pageTitles = {
+      'index': 'Awesome Athens',
+      'about': 'About',
+      'contact': 'Contact',
+      'events': 'Upcoming events'
+    }
+
+    if (!fs.existsSync('public')) {
+      fs.mkdirSync('public')
+    }
+
+    pages.forEach((page) => {
+      const currentPage = page.split('.')[0]
+
+      const renderedPage = nunjucks.render(`pages/${page}`, {groups, title: pageTitles[currentPage], upcomingEvents})
+
+      fs.closeSync(fs.openSync(`${__dirname}/public/${currentPage}.html`, 'a'))
+      fs.writeFileSync(`${__dirname}/public/${currentPage}.html`, renderedPage)
+    })
+
+    console.log('Build completed!')
+    return 0
+  } catch (e) {
+    console.log(e)
+  }
 }
 
-if (!fs.existsSync('public')) {
-  fs.mkdirSync('public')
+async function loadEvents () {
+  try {
+    let upcomingEvents = []
+    let myFactory = delayFactory({
+      delayMs: 500
+    })
+    let events = groups.filter(group => group.url.includes('meetup.com'))
+    for (let event of events) {
+      const eventName = event.url.split('/')[3]
+      console.log(`fetching ${eventName}`)
+      const response = await myFactory.queueCall(`${API}/${eventName}/events?page=7&key=${key}`)
+      if (response.data.length > 0) {
+        for (let item of response.data) {
+          const {time, name, venue, group, link, local_date, local_time} = item
+          upcomingEvents.push({time, name, venue, group, link, local_date, local_time})
+        }
+      }
+    }
+    return upcomingEvents
+  } catch (e) {
+    console.log(e)
+  }
 }
-
-pages.forEach((page) => {
-  const currentPage = page.split('.')[0]
-
-  const renderedPage = nunjucks.render(`pages/${page}`, {groups, title: pageTitles[currentPage]})
-
-  fs.closeSync(fs.openSync(`${__dirname}/public/${currentPage}.html`, 'a'))
-  fs.writeFileSync(`${__dirname}/public/${currentPage}.html`, renderedPage)
-})
-
-console.log('Build completed!')
-return 0
