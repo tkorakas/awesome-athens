@@ -1,5 +1,19 @@
-<ul>
-{% for event in upcomingEvents %}
-    <li>{{ event.name }} - {{ event.local_date }}{{ event.link }}</li>
-{% endfor %}
-</ul>
+{% extends "pages/partials/html.njk" %}
+
+{% block content %}
+    <section class="timeline">
+        {% for event in upcomingEvents %}
+
+            <div class="timeline-item">
+                <div class="timeline-img"></div>
+                <div class="timeline-content hoverable">
+                    <h4>{{ event.name }}</h4>
+                    <div class="date">{{ event.local_date }} {{ event.local_time }}</div>
+                    <p>{{ event.description|safe }}</p>
+                    <a class="bnt waves-light waves-effect timeline-link" href="{{ event.link }}">More</a>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+
+{% endblock %}

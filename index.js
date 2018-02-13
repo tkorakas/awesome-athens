@@ -73,8 +73,8 @@ async function loadEvents () {
       const response = await myFactory.queueCall(`${API}/${eventName}/events?page=7&key=${key}`)
       if (response.data.length > 0) {
         for (let item of response.data) {
-          const {time, name, venue, group, link, local_date, local_time} = item
-          upcomingEvents.push({time, name, venue, group, link, local_date, local_time})
+          const {time, name, description, group, link, local_date, local_time} = item
+          upcomingEvents.push({time, name, description, group, link, local_date, local_time})
         }
       }
     }
