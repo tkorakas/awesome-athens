@@ -2,18 +2,33 @@ const yaml = require('js-yaml')
 const fs = require('fs')
 const nunjucks = require('nunjucks')
 
+const delayFactory = require('./delayCalls')
+
+const API = 'https://api.meetup.com'
+const key = process.env.MEETUP_KEY
+
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 const groups = yaml.safeLoad(fs.readFileSync('groups.yml', 'utf8')).sort((a, b) => {
-  const nameA = a.name.toUpperCase();
-  const nameB = b.name.toUpperCase();
+  const nameA = a.name.toUpperCase()
+  const nameB = b.name.toUpperCase()
   if (nameA < nameB) {
-    return -1;
+    return -1
   }
   if (nameA > nameB) {
-    return 1;
+    return 1
   }
 
-  return 0;
+  return 0
+})
+
+let myFactory = delayFactory({
+  delayMs: 500
+})
+let events = groups.filter(group => group.url.includes('meetup.com'))
+events.forEach((event) => {
+  myFactory.queueCall(`${API}/${event.url.split('/')[3]}/events?page=20&key=${key}`)
+    .then(res => console.log(res.data))
+    .catch(console.log)
 })
 
 let pages = fs.readdirSync(`pages/`)
@@ -28,8 +43,8 @@ const pageTitles = {
   'contact': 'Contact'
 }
 
-if (!fs.existsSync('public')){
-  fs.mkdirSync('public');
+if (!fs.existsSync('public')) {
+  fs.mkdirSync('public')
 }
 
 pages.forEach((page) => {

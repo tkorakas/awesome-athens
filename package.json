@@ -6,6 +6,7 @@
   "author": "Thanos Korakas <thanoskorakas@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.17.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-copy": "^1.1.0",
