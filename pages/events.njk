@@ -8,9 +8,16 @@
                 <div class="timeline-img"></div>
                 <div class="timeline-content hoverable">
                     <h4>{{ event.name }}</h4>
+                    <a target="_blank" href="https://meetup.com/{{ event.group.urlname }}">
+                        <h6>{{ event.group.name }}</h6></a>
+                    <a target="_blank"
+                       href="https://www.google.com/maps/?q={{ event.venue.lat }},{{ event.venue.lon }}">
+                        <i class="material-icons tiny timeline-icon">place</i><span>{{ event.venue.name }}</span>
+                    </a>
                     <div class="date">{{ event.local_date }} {{ event.local_time }}</div>
-                    <p>{{ event.description|safe }}</p>
-                    <a class="bnt waves-light waves-effect timeline-link" href="{{ event.link }}">More</a>
+                    <div class="timeline-content-wrapper">{{ event.description|safe }}</div>
+                    <a target="_blank" class="bnt waves-light waves-effect timeline-link"
+                       href="{{ event.link }}">Visit Meetup</a>
                 </div>
             </div>
         {% endfor %}

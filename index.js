@@ -28,6 +28,18 @@ async function buildPages() {
     // Load upcoming events.
     let upcomingEvents = await loadEvents()
 
+    upcomingEvents = upcomingEvents.sort((a, b) => {
+      const timeA = a.time
+      const timeB = b.time
+      if (timeA < timeB) {
+        return -1
+      }
+      if (timeA > timeB) {
+        return 1
+      }
+
+      return 0
+    })
     let pages = fs.readdirSync(`pages/`)
     pages = pages.filter(page => page.includes('.njk'))
 
@@ -73,8 +85,8 @@ async function loadEvents () {
       const response = await myFactory.queueCall(`${API}/${eventName}/events?page=7&key=${key}`)
       if (response.data.length > 0) {
         for (let item of response.data) {
-          const {time, name, description, group, link, local_date, local_time} = item
-          upcomingEvents.push({time, name, description, group, link, local_date, local_time})
+          const {time, name, description, venue, group, link, local_date, local_time} = item
+          upcomingEvents.push({time, name, description, venue, group, link, local_date, local_time})
         }
       }
     }
