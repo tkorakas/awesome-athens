@@ -64,6 +64,10 @@ html {
   text-overflow: ellipsis;
 }
 
+#sidenav-overlay {
+  z-index: 996;
+}
+
 /* Prevents img without src to appear */
 img:not([src]) {
   visibility: hidden;
