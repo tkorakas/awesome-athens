@@ -26,7 +26,8 @@ buildPages()
 async function buildPages() {
   try {
     // Load upcoming events.
-    let upcomingEvents = await loadEvents()
+    let upcomingEvents = await loadMeetupEvents()
+    upcomingEvents = [...loadEvents(), ...upcomingEvents]
 
     upcomingEvents = upcomingEvents.sort((a, b) => {
       const timeA = a.time
@@ -71,8 +72,12 @@ async function buildPages() {
     console.log(e)
   }
 }
+function loadEvents() {
+  let localEvents = yaml.safeLoad(fs.readFileSync('events.yml', 'utf8'))
+  return localEvents.filter(event => event.time > Date.now())
+}
 
-async function loadEvents () {
+async function loadMeetupEvents () {
   try {
     let upcomingEvents = []
     let myFactory = delayFactory({
