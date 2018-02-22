@@ -169,4 +169,7 @@
   url: https://www.meetup.com/Papers-We-Love-Athens/
   description: Come share the ideas in an awesome academic/research paper with fellow engineers, programmers, and paper-readers.
   image: paperwelove.png
-
+- name: Software Craftsmanship
+  type: community
+  url: https://www.meetup.com/Athens-Software-Craftsmanship/
+  description: This is a community for those who care about their code, who want to improve their craft and help others improve theirs
