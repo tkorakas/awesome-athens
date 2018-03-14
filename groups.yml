@@ -173,3 +173,8 @@
   type: community
   url: https://www.meetup.com/Athens-Software-Craftsmanship/
   description: This is a community for those who care about their code, who want to improve their craft and help others improve theirs
+- name: Jobfestival.gr
+  type: community
+  url: https://jobfestival.gr
+  description: Job Festivals από το Skywalker.gr. Τα Φεστιβάλ θα είναι αφιερωμένα στην εργασία, στην αναζήτησή της και σε νέα εγχειρήματα. Θα παρακολουθήσετε διάφορες σχετικές θεματικές ενότητες, workshops σχετικά με την επιτυχημένη συνέντευξη, social media, βιογραφικό σημείωμα και soft links. Μέρες εφοδιασμένες με τα κατάλληλα εργαλεία για αναζήτηση εργασίας! Ακόμα, θα υπάρχουν διάφορα καλλιτεχνικά events.
+  image: jobfestival_logo.png
