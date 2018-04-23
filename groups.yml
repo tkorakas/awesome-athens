@@ -178,3 +178,8 @@
   url: https://jobfestival.gr
   description: Job Festivals από το Skywalker.gr. Τα Φεστιβάλ θα είναι αφιερωμένα στην εργασία, στην αναζήτησή της και σε νέα εγχειρήματα. Θα παρακολουθήσετε διάφορες σχετικές θεματικές ενότητες, workshops σχετικά με την επιτυχημένη συνέντευξη, social media, βιογραφικό σημείωμα και soft links. Μέρες εφοδιασμένες με τα κατάλληλα εργαλεία για αναζήτηση εργασίας! Ακόμα, θα υπάρχουν διάφορα καλλιτεχνικά events.
   image: jobfestival_logo.png
+- name: Athens-Gophers
+  type: community
+  url: https://www.meetup.com/Athens-Gophers/
+  description: This is a group for all those interested in learning about and working with the Go programming language (Golang).
+  image: go.png
