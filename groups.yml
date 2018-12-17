@@ -34,11 +34,6 @@
   type: community
   url: https://www.meetup.com/API-Athens/
   description: This meetup is for people who build, use, explore or want to learn more about APIs.
-- name: Hackerspace GR
-  type: workspace
-  url: https://www.meetup.com/hackerspace_gr/
-  description: This is a group for anyone interested in creativity, collaboration, research, development and, of course, education. It is a dynamic community with ideas inspired by the Open Source philosophy.
-  image: hackerspace.png
 - name: GDG Android
   type: community
   url: https://www.meetup.com/GDG-Android-Athens/
