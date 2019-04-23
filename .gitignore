@@ -2,3 +2,4 @@
 node_modules
 groups/
 public
+.DS_STORE

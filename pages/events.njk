@@ -4,10 +4,13 @@
     <section class="timeline">
         {% for event in upcomingEvents %}
 
-            <div class="timeline-item">
+            <div class="timeline-item" id="{{event.id}}">
                 <div class="timeline-img"></div>
                 <div class="timeline-content hoverable">
-                    <h4>{{ event.name }}</h4>
+                    <h4>
+                        <a target="_blank"
+                          href="{{ event.link }}">{{ event.name }}</a>
+                    </h4>
                     <a target="_blank" href="https://meetup.com/{{ event.group.urlname }}">
                         <h6>{{ event.group.name }}</h6></a>
                     {% if event.venue %}
@@ -18,8 +21,6 @@
                     {% endif %}
                     <div class="date">{{ event.local_date }} {{ event.local_time }}</div>
                     <div class="timeline-content-wrapper">{{ event.description|safe }}</div>
-                    <a target="_blank" class="waves-light waves-effect timeline-link"
-                       href="{{ event.link }}">Visit event</a>
                 </div>
             </div>
         {% endfor %}
