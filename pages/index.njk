@@ -6,13 +6,7 @@
 
 {% block content %}
     <div id="cards-container">
-        <div class="container list-filter">
-            <input name="types" value="community" type="radio" id="community"/>
-            <label for="community">Communities</label>
-            <input name="types" value="workspace" type="radio" id="workspace"/>
-            <label for="workspace">Workspaces</label>
-        </div>
-        <div class="cards list">
+        <div class="cards">
             {% for group in groups %}
                 <a href="{{ group.url }}" target="_blank">
                     <div class="card hoverable">
@@ -35,6 +29,4 @@
 
 {% block js %}
     <script src="//cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.6.0/lazyload.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
-    <script src="assets/script.js"></script>
 {% endblock %}

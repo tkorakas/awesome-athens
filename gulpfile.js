@@ -1,44 +1,33 @@
-const gulp = require('gulp')
-const sass = require('gulp-sass')
-const autoprefixer = require('gulp-autoprefixer');
+const { src, dest, watch, series } = require("gulp");
+const sass = require("gulp-sass");
+const autoprefixer = require("gulp-autoprefixer");
 
-// Compile sass to css for dev.
-gulp.task('sass', () => {
-  return gulp.src('./sass/*.scss')
-  // Initializes sourcemaps.
-    .pipe(sass.sync().on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: true
-    }))
-    // Writes sourcemaps into the CSS file.
-    .pipe(gulp.dest('./public/css'))
-})
+const sassDev = _ => {
+  return src("./sass/*.scss")
+    .pipe(sass.sync().on("error", sass.logError))
+    .pipe(autoprefixer())
+    .pipe(dest("./public/css"));
+};
 
-gulp.task('sass:prod', function() {
-  return gulp.src('./sass/*.scss')
-    .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
-    .pipe(gulp.dest('./public/css'))
-})
+const sassProd = _ => {
+  return src("./sass/*.scss")
+    .pipe(sass.sync({ outputStyle: "compressed" }).on("error", sass.logError))
+    .pipe(autoprefixer())
+    .pipe(dest("./public/css"));
+};
 
-gulp.task('copy', function () {
-  gulp
-    .src('assets/*')
-    .pipe(gulp.dest('public/assets'))
-});
+const copy = _ => {
+  return src("assets/*").pipe(dest("public/assets"));
+};
 
-gulp.task('copy-files', function () {
-  gulp
-    .src('files/*')
-    .pipe(gulp.dest('public'))
-});
+const copyFiles = _ => {
+  return src("files/*").pipe(dest("public"));
+};
 
-gulp.task('build', ['sass:prod', 'copy', 'copy-files'])
+const build = series(sassProd, copy, copyFiles);
 
-gulp.task('default', () => {
-  gulp.watch('./sass/*.scss', ['sass'])
-})
+exports.default = _ => {
+  watch("./sass/*.scss", sassDev);
+};
+
+exports.build = build;
