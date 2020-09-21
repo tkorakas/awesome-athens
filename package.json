@@ -8,7 +8,7 @@
   "dependencies": {
     "js-yaml": "^3.13.1",
     "nunjucks": "^3.2.0",
-    "sharp": "^0.24.0"
+    "sharp": "^0.26.1"
   },
   "scripts": {
     "build": "node index.js && gulp build"
